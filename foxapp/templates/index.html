@@ -6,6 +6,31 @@
 {% endblock title %}
 
 {%block mainbody%}
+<style>
+    .do-caption p {
+      overflow-y: auto;
+      height: 90px;
+    }
+
+    /* Webkit (Chrome, Safari, etc.) */
+    .do-caption p::-webkit-scrollbar {
+      width: 8px; /* Set width for vertical scrollbar */
+    }
+
+    .do-caption p::-webkit-scrollbar-thumb {
+      background-color: #ff5c97; /* Color of the thumb */
+      border-radius: 4px; /* Rounded corners */
+    }
+
+    .do-caption p::-webkit-scrollbar-thumb:hover {
+      background-color: #ff5c97; /* Hover color */
+    }
+
+    .do-caption p::-webkit-scrollbar-track {
+      background-color: #f0f0f0; /* Color of the track */
+      border-radius: 4px; /* Rounded corners */
+    }
+  </style>
     <main>
 
         <!-- Slider Area Start-->
@@ -17,31 +42,10 @@
                             <div class="col-lg-7 col-md-9 ">
                                 <div class="hero__caption">
                                     <h1 data-animation="fadeInLeft" data-delay=".4s">We Collect<br> High Quality Leads</h1>
-                                    <p data-animation="fadeInLeft" data-delay=".6s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravi.</p>
+                                    <p data-animation="fadeInLeft" data-delay=".6s">Boost your business with Learning Fox Interactive. We specialize in SEO, website development, e-learning services, and quality assurance—delivering high-quality leads tailored to your needs.</p>
                                     <!-- Hero-btn -->
                                     <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s">
-                                        <a href="industries.html" class="btn hero-btn">Contact Us</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="hero__img d-none d-lg-block" data-animation="fadeInRight" data-delay="1s">
-                                    <img src="{% static 'img/hero/hero_right.png' %}" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="single-slider slider-height d-flex align-items-center" data-background="{% static 'img/hero/h1_hero.png' %}">
-                    <div class="container">
-                        <div class="row d-flex align-items-center">
-                            <div class="col-lg-7 col-md-9 ">
-                                <div class="hero__caption">
-                                    <h1 data-animation="fadeInLeft" data-delay=".4s">We Collect<br> High Quality Leads</h1>
-                                    <p data-animation="fadeInLeft" data-delay=".6s">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravi.</p>
-                                    <!-- Hero-btn -->
-                                    <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s">
-                                        <a href="industries.html" class="btn hero-btn">Contact Us</a>
+                                        <a href="/contact" class="btn hero-btn">Contact Us</a>
                                     </div>
                                 </div>
                             </div>
@@ -63,7 +67,7 @@
                 <div class="row d-flex justify-content-center">
                     <div class="col-lg-8">
                         <div class="section-tittle text-center">
-                            <h2>What We Will Do For Your Business​</h2>
+                            <h2>What We Will Do For Your Business</h2>
                         </div>
                     </div>
                 </div>
@@ -71,45 +75,59 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single-do text-center mb-30">
                             <div class="do-icon">
-                                <span  class="flaticon-tasks"></span>
+                                <span  class="flaticon-chart"></span>
                             </div>
                             <div class="do-caption">
-                                <h4>Link Building</h4>
-                                <p>Hunky dory barney fanny around up the duff no biggie loo cup of tea jolly good ruddy say arse!</p>
+                                <h4>SEO Services</h4>
+                                <p>Optimize your online presence with our SEO expertise. Boost visibility and drive organic traffic.</p>
                             </div>
                             <div class="do-btn">
                                 <a href="#"><i class="ti-arrow-right"></i> get started</a>
                             </div>
                         </div>
                     </div>
-                     <div class="col-lg-4 col-md-6">
-                        <div class="single-do active text-center mb-30">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-do text-center mb-30">
+                            <div class="do-icon">
+                                <span  class="flaticon-growth"></span>
+                            </div>
+                            <div class="do-caption">
+                                <h4>Website Development</h4>
+                                <p>Craft engaging, user-friendly websites that reflect your brand identity and drive conversions.</p>
+                            </div>
+                            <div class="do-btn">
+                                <a href="#"><i class="ti-arrow-right"></i> get started</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-do text-center mb-30">
                             <div class="do-icon">
                                 <span  class="flaticon-social-media-marketing"></span>
                             </div>
                             <div class="do-caption">
-                                <h4>Content marketing</h4>
-                                <p>Hunky dory barney fanny around up the duff no biggie loo cup of tea jolly good ruddy say arse!</p>
+                                <h4>E-Learning Services</h4>
+                                <p>Empower your audience with interactive e-learning solutions. From content creation to platform development, we've got you covered.</p>
                             </div>
                             <div class="do-btn">
                                 <a href="#"><i class="ti-arrow-right"></i> get started</a>
                             </div>
                         </div>
                     </div>
-                     <div class="col-lg-4 col-md-6">
+                    {% comment %} <div class="col-lg-3 col-md-6">
                         <div class="single-do text-center mb-30">
                             <div class="do-icon">
-                                <span  class="flaticon-project"></span>
+                                <span  class="flaticon-social-media-marketing"></span>
                             </div>
                             <div class="do-caption">
-                                <h4>On Page SEO</h4>
-                                <p>Hunky dory barney fanny around up the duff no biggie loo cup of tea jolly good ruddy say arse!</p>
+                                <h4>Quality Assurance Services</h4>
+                                <p>Ensure seamless functionality and user satisfaction with our rigorous quality assurance processes.</p>
                             </div>
                             <div class="do-btn">
                                 <a href="#"><i class="ti-arrow-right"></i> get started</a>
                             </div>
                         </div>
-                    </div>
+                    </div> {% endcomment %}
                 </div>
             </div>
         </div>
@@ -126,8 +144,8 @@
                     <div class="col-lg-6 col-md-12">
                         <div class="we-create-cap">
                             <h3>We Create a Steps to Build a Successful Digital Product</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis orem ipsum dolor sit amet, consectetur adipiscing.</p>
-                            <a href="#" class="btn">Contact Us</a>
+                            <p>Embark on a transformative journey with us as we guide you through crafting a successful digital product. Define your vision, design with precision, develop with expertise, and deploy with confidence. Transform your idea into reality and let's create something amazing together.</p>
+                            <a href="/contact" class="btn">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -153,8 +171,7 @@
                             </div>
                             <div class="generating-cap">
                                 <h4>All Sizes Business</h4>
-                                <p>Seddo eiusmod tempor incididunt labore lore magna aliqua uisipsum suspendis incididun
-                                    se ultrices gravida. </p>
+                                <p>Unlock growth potential regardless of your business scale with our online marketing strategies.</p>
                             </div>
                         </div>
                     </div> 
@@ -165,8 +182,7 @@
                             </div>
                             <div class="generating-cap">
                                 <h4>Awesome Results</h4>
-                                <p>Seddo eiusmod tempor incididunt labore lore magna aliqua uisipsum suspendis incididun
-                                    se ultrices gravida. </p>
+                                <p>Experience the satisfaction of achieving outstanding outcomes with our effective online marketing.</p>
                             </div>
                         </div>
                     </div>
@@ -177,8 +193,7 @@
                             </div>
                             <div class="generating-cap">
                                 <h4>Keep you in the Loop</h4>
-                                <p>Seddo eiusmod tempor incididunt labore lore magna aliqua uisipsum suspendis incididun
-                                    se ultrices gravida. </p>
+                                <p>Stay informed at every step of the journey with transparent communication and progress updates.</p>
                             </div>
                         </div>
                     </div>
@@ -189,8 +204,7 @@
                             </div>
                             <div class="generating-cap">
                                 <h4>Significant ROI</h4>
-                                <p>Seddo eiusmod tempor incididunt labore lore magna aliqua uisipsum suspendis incididun
-                                    se ultrices gravida. </p>
+                                <p>Maximize your return on investment through our targeted and impactful online marketing solutions.</p>
                             </div>
                         </div>
                     </div>
@@ -343,7 +357,7 @@
                                     <div class="single-testimonial text-center">
                                         <div class="testimonial-caption ">
                                             <div class="testimonial-top-cap">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                                <p>With their SEO expertise, our online visibility has skyrocketed. We're consistently ranking higher and attracting quality leads. Exceptional service!</p>
                                             </div>
                                             <!-- founder -->
                                             <div class="testimonial-founder d-flex align-items-center justify-content-center">
@@ -352,7 +366,7 @@
                                                 </div>
                                             <div class="founder-text">
                                                 <span>Oliva jems</span>
-                                                <p>UIX designer</p>
+                                                <p>Marketing Director</p>
                                             </div>
                                             </div>
                                         </div>
@@ -360,16 +374,16 @@
                                     <div class="single-testimonial text-center">
                                         <div class="testimonial-caption ">
                                             <div class="testimonial-top-cap">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+                                                <p>Our website's functionality and design exceeded our expectations. The team's web development skills are top-notch, delivering a seamless user experience.</p>
                                             </div>
                                             <!-- founder -->
                                             <div class="testimonial-founder d-flex align-items-center justify-content-center">
                                                 <div class="founder-img">
-                                                    <img src="{% static 'img/testmonial/testimonial.png' %}" alt="">
+                                                    <img style="border-radius: 50%;" src="{% static 'img/testmonial/2.png' %}" alt="">
                                                 </div>
                                             <div class="founder-text">
-                                                <span>Oliva jems</span>
-                                                <p>UIX designer</p>
+                                                <span>Manmohan Singh</span>
+                                                <p>Chief Technology Officer</p>
                                             </div>
                                             </div>
                                         </div>
@@ -441,7 +455,7 @@
                         <div class="col-xl-7 col-lg-9 col-md-12">
                             <div class="wantToWork-caption">
                                 <h2>Have project in mind?</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut.</p>
+                                <p>Ready to bring your vision to life? Share your project ideas with us, and let's create something extraordinary together!</p>
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-3 col-md-12">
