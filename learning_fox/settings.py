@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-88g&v1u^1mv5-zd)$5bdn_u99-d+1syb&8&0t8tjtr^2y=pxvy
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['learningfoxinteractive.com']
+ALLOWED_HOSTS = ['learningfoxinteractive.com', '*']
 
 CORS_ALLOWED_ORIGINS = ['https://learningfoxinteractive.com/', 'http://learningfoxinteractive.com/']
 
