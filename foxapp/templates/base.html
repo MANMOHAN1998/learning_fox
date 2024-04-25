@@ -37,13 +37,29 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="{% static 'img/logo/logo.png' %}" alt="">
+                    <img class="logo-flex" src="{% static 'img/logo/logo.png' %}" alt="">
                 </div>
             </div>
         </div>
     </div>
     <!-- Preloader Start -->
+    <style>
+    .img-logo{
+        width:200%;
+    }
 
+    @media (max-width: 991px) {
+        .img-logo{
+        width:600%;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .img-logo {
+            width:50%
+        }
+    }
+    </style>
     <header>
         <!-- Header Start -->
        <div class="header-area header-transparrent ">
@@ -53,7 +69,7 @@
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-1">
                             <div class="logo">
-                                <a href="/"><img src="{% static 'img/logo/logo.png' %}" alt=""></a>
+                                <a href="/"><img class="img-logo"  src="{% static 'img/logo/logo.png' %}" alt=""></a>
                             </div>
                         </div>
                         <div class="col-xl-8 col-lg-8 col-md-8">
